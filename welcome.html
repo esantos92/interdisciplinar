@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+</head>
+<body>
+  <header>
+    <h1 class="title"></h1>
+  </header>
+</body>
+
+<script type="text/javascript">
+  var user_name = localStorage.getItem('user')
+  let title = document.querySelector('.title')
+  window.onload = () =>{
+    if(user_name) {
+      user_name = localStorage.getItem('user')
+      title = document.querySelector('.title')
+      title.innerText = `Seja Bem Vindo ${user_name}!!!!!!`
+    }else {
+      window.location.href='./welcome.html'
+    }
+  }
+
+</script>
+
+<style>
+  body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    color: darkslategray;
+  }
+</style>
+</html>
